@@ -98,6 +98,7 @@ button {
     color: #fff;
     font-weight: 600;
     margin-left: 16px;
+    text-transform: uppercase;
 }
 
 .hero__thumb {
@@ -130,7 +131,12 @@ button {
 @media screen and (max-width: 1439.99px) {
     .container-fluid {
         max-width: 1160px;
-    }    
+    }
+
+    .hero__thumb {
+        max-width: 500px;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 1199.99px) {
@@ -139,16 +145,33 @@ button {
     }    
 }
 
-@media screen and (max-width: 991.99px) {
+@media screen and (max-width: 1023.99px) {
     .container-fluid {
         max-width: 760px;
-    }    
+    }   
+
+    .hero__conent {
+        flex-direction: column;
+    }
+
+    .hero__title {
+        font-size: 56px;
+        margin: 40px 0;
+    }
 }
 
 @media screen and (max-width: 767.99px) {
     .container-fluid {
         max-width: 540px;
     }    
+
+    .hero__title {
+        font-size: 48px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
 }
 
 @media screen and (max-width: 555.99px) {
@@ -156,4 +179,31 @@ button {
         max-width: 100%;
         margin: 0 20px;
     }    
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero__subtext {
+        font-size: 24px;
+    }
+
+    .hero__title {
+        font-size: 36px;
+    }
+
+    .hero__thumb {
+        max-width: 300px;
+    }
+
+    .hero__promo {
+        font-size: 18px;
+    }
+
+    .promo--code {
+        padding: 8px 22px;
+        font-weight: 500;
+        margin-left: 12px;
+    }
+
 }
