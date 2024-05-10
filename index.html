@@ -3,10 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- =-= Font Awesome CDN =-= -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- =-= Custom Style Sheets =-= -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Summer Sale</title>
   </head>
   <body>
+    <!-- =-= Hero Section =-= -->
     <section class="container-full hero">
       <div class="container-fluid">
         <div class="hero__conent">
@@ -16,11 +25,66 @@
               Purchase TK 200 or above & get
               <span class="title--pink">20% off</span>
             </h2>
-            <p class="hero__promo">Use Promo Code <span class="promo--code">SELL200</span></p>
+            <p class="hero__promo">
+              Use Promo Code <span class="promo--code">SELL200</span>
+            </p>
           </div>
           <div class="hero__thumb">
-            <img src="./assets/img/Summer1.png" alt="Summer Hero Thumb">
+            <img src="./assets/img/Summer1.png" alt="Summer Hero Thumb" />
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =-= Products Categories =-= -->
+    <section class="container-full products">
+      <div class="container-fluid">
+        <div class="products__content">
+          <div class="product__categories">
+            <h3 class="category__title">Kitchenware</h3>
+            <div class="product__list">
+              <div class="product__item">
+                <div class="product__thumbs">
+                  <img src="./assets/img/prod1.png" alt="Product" />
+                </div>
+                <div class="product__body">
+                  <div class="product__reviews">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <p class="product__name">K. Accessories</p>
+                  <span class="product__price">25.00 Tk</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <aside class="product__carts">
+            <div class="product__coupon">
+              <h3 class="coupon__title">Have Coupon</h3>
+              <div class="coupon__block">
+                <input
+                  class="coupon__field"
+                  type="text"
+                  placeholder="Coupon code"
+                />
+                <button class="coupon__btn">Apply</button>
+              </div>
+            </div>
+            <div class="carts__block">
+                <div class="cart__box">
+                    <p class="carts__item">1. Home Cooker</p>
+                </div>
+                <div class="cart__prices">
+                    <p>Total price: <span class="product__Tprice">257.00</span>TK</p>
+                    <p>Discount: <span class="product__Dprice">51.40</span>TK</p>
+                    <p>Total: <span class="total__price">205.60</span>TK</p>
+                </div>
+                <button class="purchage-btn">Make Purchase</button>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
