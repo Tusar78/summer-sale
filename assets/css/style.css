@@ -35,3 +35,46 @@ button {
   font-family: "Work Sans", sans-serif;
   font-size: 1rem;
 }
+
+.container-full {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-fluid {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 48px;
+}
+
+@media screen and (max-width: 1439.99px) {
+    .container-fluid {
+        max-width: 1160px;
+    }    
+}
+
+@media screen and (max-width: 1199.99px) {
+    .container-fluid {
+        max-width: 960px;
+    }    
+}
+
+@media screen and (max-width: 991.99px) {
+    .container-fluid {
+        max-width: 760px;
+    }    
+}
+
+@media screen and (max-width: 767.99px) {
+    .container-fluid {
+        max-width: 540px;
+    }    
+}
+
+@media screen and (max-width: 555.99px) {
+    .container-fluid {
+        max-width: 100%;
+        margin: 0 20px;
+    }    
+}
