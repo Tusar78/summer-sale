@@ -392,6 +392,7 @@ input:checked ~ #rate-label {
     position: fixed;
     top: 30px;
     right: 40px;
+    display: none;
   }
 
   .product__coupon {
