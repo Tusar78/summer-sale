@@ -107,11 +107,15 @@ button {
   height: 708px;
 }
 
-.hero__thumb > img {
-  height: 100%;
+/* Products Section */
+.category__title {
+    margin-top: 56px;
 }
 
-/* Products Section */
+.category__title:first-child {
+    margin-top: 0;
+}
+
 .products {
   padding: 120px 0;
   background-color: #f8f8f8;
@@ -125,7 +129,7 @@ button {
 
 .product__categories {
   width: 100%;
-  max-width: 974px;
+  max-width: 1074px;
 }
 
 .category__title {
@@ -159,6 +163,7 @@ button {
 .product__thumbs > img {
   height: 100%;
   object-fit: contain;
+  padding: 33px 0;
 }
 
 .product__body {
@@ -202,6 +207,12 @@ input:checked ~ #rate-label {
   font-size: 20px;
   font-weight: 400;
   color: rgb(17, 17, 17, 0.5);
+}
+
+.product__carts {
+    width: 100%;
+    max-width: 342px;
+    margin-top: 79px;
 }
 
 .product__coupon {
