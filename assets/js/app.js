@@ -22,6 +22,8 @@ const cartBox = document.querySelector(".cart__box");
 const purchageBtn = document.querySelector(".purchage-btn");
 const cuponField = document.querySelector(".coupon__field");
 const cuponBtn = document.querySelector(".coupon__btn");
+const popupHome = document.querySelector(".popup__home");
+const popupWrap = document.querySelector(".popup-wrap");
 
 // Set variables
 let itemCount = 0;
@@ -42,8 +44,8 @@ productItems.forEach((item) => {
     itemCount += 1;
     let productName = this.children[1].children[1].innerText;
     let productPrice = +this.children[1].children[2].children[0].innerText;
-    let cartItem = document.createElement('p');
-    cartItem.className = 'carts__item';
+    let cartItem = document.createElement("p");
+    cartItem.className = "carts__item";
     cartItem.innerText = `${itemCount}. ${productName}`;
     cartBox.append(cartItem);
 
@@ -77,4 +79,15 @@ cuponBtn.addEventListener("click", (e) => {
   productDiscount.innerText = parseFloat(discountPrice).toFixed(2);
 
   priceCalulation(mainTotal, totalPrice, discountPrice, totalAmmount);
+});
+
+// Completation
+purchageBtn.addEventListener("click", e => {
+  popupWrap.
+})
+
+// Go to Home
+popupHome.addEventListener("click", e => {
+  e.target.parentNode.parentNode.style.display = 'none';
+  window.location = 'index.html'
 });

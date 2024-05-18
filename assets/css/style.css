@@ -331,6 +331,66 @@ input:checked ~ #rate-label {
   font-size: 24px;
 }
 
+/* Disabled Button Design */
+.coupon__btn:disabled,
+.purchage-btn:disabled {
+  background: #d4d4d4;
+  color: #969696;
+  border: none;
+  cursor:not-allowed;
+}
+
+/* Popup Design */
+.popup-wrap {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.288);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__box {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  padding: 104px 40px;
+}
+
+.popup__icon {
+  width: 160px;
+  height: 160px;
+}
+
+.popup__title {
+  margin: 40px 0 16px;
+  font-size: 48px;
+  font-weight: 700;
+  color: #111;
+}
+
+.popup__subtitle {
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(17, 17, 17, 0.5);
+}
+
+.popup__home {
+  padding: 16px 45px;
+  color: #fff;
+  background: #e527b2;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1439.99px) {
   .container-fluid {
     max-width: 1160px;
@@ -513,13 +573,4 @@ input:checked ~ #rate-label {
     font-size: 16px;
     font-weight: 500;
   }
-}
-
-
-.coupon__btn:disabled,
-.purchage-btn:disabled {
-  background: #d4d4d4;
-  color: #969696;
-  border: none;
-  cursor:not-allowed;
 }
