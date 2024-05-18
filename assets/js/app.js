@@ -39,10 +39,13 @@ const priceCalulation = (mainTotal, totalPrice, discountPrice, elem) => {
 // All OF ITEMs
 productItems.forEach((item) => {
   item.addEventListener("click", function (e) {
-    1;
     itemCount += 1;
     let productName = this.children[1].children[1].innerText;
     let productPrice = +this.children[1].children[2].children[0].innerText;
+    let cartItem = document.createElement('p');
+    cartItem.className = 'carts__item';
+    cartItem.innerText = `${itemCount}. ${productName}`;
+    cartBox.append(cartItem);
 
     // Total Product Price
     totalPrice += productPrice;
@@ -71,8 +74,7 @@ cuponBtn.addEventListener("click", (e) => {
   // Discount Calculation
   const DISCOUNT = 20;
   discountPrice = (totalPrice * DISCOUNT) / 100;
-  productDiscount.innerText = discountPrice;
+  productDiscount.innerText = parseFloat(discountPrice).toFixed(2);
 
   priceCalulation(mainTotal, totalPrice, discountPrice, totalAmmount);
-  cuponField.value = "";
 });
