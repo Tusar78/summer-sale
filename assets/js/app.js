@@ -23,16 +23,20 @@ const purchageBtn = document.querySelector(".purchage-btn");
 const cuponField = document.querySelector(".coupon__field");
 const cuponBtn = document.querySelector(".coupon__btn");
 
+// Set variables
 let itemCount = 0;
 let totalPrice = 0;
 let discountPrice = "0";
 let mainTotal = "0";
+const CUPON = "SELL200";
 
 // Total Price Calculator
 const priceCalulation = (mainTotal, totalPrice, discountPrice, elem) => {
   mainTotal = totalPrice - discountPrice;
   elem.innerText = mainTotal;
 };
+
+// All OF ITEMs
 productItems.forEach((item) => {
   item.addEventListener("click", function (e) {
     1;
@@ -44,11 +48,18 @@ productItems.forEach((item) => {
     totalPrice += productPrice;
     totalProductPrice.innerText = totalPrice;
     priceCalulation(mainTotal, totalPrice, discountPrice, totalAmmount);
+
+    // Make purchase Button Should be enable
+    if (totalAmmount.innerText > 0) {
+      purchageBtn.removeAttribute("disabled");
+    } else {
+      purchageBtn.setAttribute("disabled", "true");
+    }
   });
 });
 
 cuponField.addEventListener("keyup", function (e) {
-  if (e.target.value == "SELL200" && totalPrice >= 200) {
+  if (e.target.value === CUPON && totalPrice >= 200) {
     cuponBtn.removeAttribute("disabled");
   } else {
     cuponBtn.setAttribute("disabled", "true");
@@ -63,5 +74,5 @@ cuponBtn.addEventListener("click", (e) => {
   productDiscount.innerText = discountPrice;
 
   priceCalulation(mainTotal, totalPrice, discountPrice, totalAmmount);
-  cuponField.value = '';
+  cuponField.value = "";
 });
