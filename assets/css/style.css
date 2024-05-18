@@ -516,7 +516,8 @@ input:checked ~ #rate-label {
 }
 
 
-.coupon__btn:disabled {
+.coupon__btn:disabled,
+.purchage-btn:disabled {
   background: #d4d4d4;
   color: #969696;
   border: none;

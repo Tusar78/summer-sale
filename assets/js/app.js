@@ -27,6 +27,12 @@ let itemCount = 0;
 let totalPrice = 0;
 let discountPrice = "0";
 let mainTotal = "0";
+
+// Total Price Calculator
+const priceCalulation = (mainTotal, totalPrice, discountPrice, elem) => {
+  mainTotal = totalPrice - discountPrice;
+  elem.innerText = mainTotal;
+};
 productItems.forEach((item) => {
   item.addEventListener("click", function (e) {
     1;
@@ -37,28 +43,25 @@ productItems.forEach((item) => {
     // Total Product Price
     totalPrice += productPrice;
     totalProductPrice.innerText = totalPrice;
-
-    // Total Price
-    mainTotal = totalPrice - discountPrice;
-    totalAmmount.innerText = mainTotal;
+    priceCalulation(mainTotal, totalPrice, discountPrice, totalAmmount);
   });
 });
 
 cuponField.addEventListener("keyup", function (e) {
-  const DISCOUNT = 20;
-
   if (e.target.value == "SELL200" && totalPrice >= 200) {
-    discountPrice = (totalPrice * DISCOUNT) / 100;
     cuponBtn.removeAttribute("disabled");
-    // Total Price
-    mainTotal = totalPrice - discountPrice;
-    totalAmmount.innerText = mainTotal;
   } else {
     cuponBtn.setAttribute("disabled", "true");
-    discountPrice = "0"
-    mainTotal = totalPrice - discountPrice;
-    totalAmmount.innerText = mainTotal;
   }
+});
 
+// Apply Cupon Button
+cuponBtn.addEventListener("click", (e) => {
+  // Discount Calculation
+  const DISCOUNT = 20;
+  discountPrice = (totalPrice * DISCOUNT) / 100;
   productDiscount.innerText = discountPrice;
+
+  priceCalulation(mainTotal, totalPrice, discountPrice, totalAmmount);
+  cuponField.value = '';
 });
