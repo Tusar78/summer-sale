@@ -514,3 +514,11 @@ input:checked ~ #rate-label {
     font-weight: 500;
   }
 }
+
+
+.coupon__btn:disabled {
+  background: #d4d4d4;
+  color: #969696;
+  border: none;
+  cursor:not-allowed;
+}
