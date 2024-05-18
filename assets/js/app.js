@@ -82,12 +82,12 @@ cuponBtn.addEventListener("click", (e) => {
 });
 
 // Completation
-purchageBtn.addEventListener("click", e => {
-  popupWrap.style.display = 'flex';
-})
+purchageBtn.addEventListener("click", (e) => {
+  popupWrap.style.display = "flex";
+});
 
 // Go to Home
-popupHome.addEventListener("click", e => {
-  e.target.parentNode.parentNode.style.display = 'none';
-  location.href= 'index.html'
+popupHome.addEventListener("click", (e) => {
+  e.target.parentNode.parentNode.style.display = "none";
+  location.href = "https://tus-summer-sale.netlify.app/#product-c";
 });
