@@ -60,23 +60,23 @@ productItems.forEach((item) => {
     } else {
       purchageBtn.setAttribute("disabled", "true");
     }
-  });
-});
 
-cuponField.addEventListener("keyup", function (e) {
-  if (e.target.value === CUPON && totalPrice >= 200) {
-    cuponBtn.removeAttribute("disabled");
-  } else {
-    cuponBtn.setAttribute("disabled", "true");
-  }
+    if (totalPrice >= 200) {
+      cuponBtn.removeAttribute("disabled");
+    } else {
+      cuponBtn.setAttribute("disabled", "true");
+    }
+  });
 });
 
 // Apply Cupon Button
 cuponBtn.addEventListener("click", (e) => {
   // Discount Calculation
   const DISCOUNT = 20;
-  discountPrice = (totalPrice * DISCOUNT) / 100;
-  productDiscount.innerText = parseFloat(discountPrice).toFixed(2);
+  if (cuponField.value === CUPON) {
+    discountPrice = (totalPrice * DISCOUNT) / 100;
+    productDiscount.innerText = parseFloat(discountPrice).toFixed(2);
+  }
 
   priceCalulation(mainTotal, totalPrice, discountPrice, totalAmmount);
 });
@@ -90,5 +90,4 @@ purchageBtn.addEventListener("click", (e) => {
 popupHome.addEventListener("click", (e) => {
   e.target.parentNode.parentNode.style.display = "none";
   location.href = "https://tus-summer-sale.netlify.app/";
-  location.hash = "#product-c";
 });
