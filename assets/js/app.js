@@ -83,11 +83,11 @@ cuponBtn.addEventListener("click", (e) => {
 
 // Completation
 purchageBtn.addEventListener("click", e => {
-  popupWrap.
+  popupWrap.style.display = 'flex';
 })
 
 // Go to Home
 popupHome.addEventListener("click", e => {
   e.target.parentNode.parentNode.style.display = 'none';
-  window.location = 'index.html'
+  location.href= 'index.html'
 });
