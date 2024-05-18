@@ -89,5 +89,6 @@ purchageBtn.addEventListener("click", (e) => {
 // Go to Home
 popupHome.addEventListener("click", (e) => {
   e.target.parentNode.parentNode.style.display = "none";
-  location.href = "https://tus-summer-sale.netlify.app/#product-c";
+  location.href = "https://tus-summer-sale.netlify.app/";
+  location.hash = "#product-c";
 });
