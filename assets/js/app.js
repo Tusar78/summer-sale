@@ -91,3 +91,35 @@ popupHome.addEventListener("click", (e) => {
   e.target.parentNode.parentNode.style.display = "none";
   location.href = "https://tus-summer-sale.netlify.app/";
 });
+
+
+// Small GSAP
+const timeLine = gsap.timeline();
+console.log(timeLine);
+
+timeLine.from(".hero__subtext", {
+  display: 'block',
+  y: 20,
+  opacity: 0,
+  delay: 1,
+  duration: 0.5,
+})
+
+timeLine.from(".hero__title", {
+  display: 'block',
+  y: 20,
+  opacity: 0,
+  duration: 0.5,
+})
+timeLine.from(".hero__promo", {
+  display: 'block',
+  y: 20,
+  opacity: 0,
+  duration: 0.5,
+})
+timeLine.from(".hero__thumb", {
+  display: 'block',
+  y: 20,
+  opacity: 0,
+  duration: 0.5,
+})
