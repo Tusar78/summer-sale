@@ -123,3 +123,38 @@ timeLine.from(".hero__thumb", {
   opacity: 0,
   duration: 0.5,
 })
+
+gsap.from(".product__list .product__item", {
+  opacity: 0,
+  y: 40,
+  duration: 1,
+  stagger: 0.75,
+  scrollTrigger: {
+    trigger: '.product__list .product__item',
+    scroller: 'body',
+    start: 'top 50%',
+    scrub: 2,
+  }
+})
+
+gsap.from(".product__coupon", {
+  opacity: 0,
+  x: 400,
+  duration: 1,
+  scrollTrigger: {
+    trigger: '.product__coupon',
+    scroller: 'body',
+    start: 'top 50%'
+  }
+})
+
+gsap.from(".sticky-div", {
+  opacity: 0,
+  x: 400,
+  duration: 1,
+  scrollTrigger: {
+    trigger: '.product__coupon',
+    scroller: 'body',
+    start: "top 50%"
+  }
+})
